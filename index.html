@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>One Page Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS custom -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER / HERO ================= -->
+<header class="hero d-flex align-items-center justify-content-center text-center">
+    <div class="hero-content">
+        <span class="hero-subtitle">Ristorante</span>
+        <h1 class="hero-title">Le Bistrot Italien</h1>
+        <span class="hero-separator"></span>
+        <p class="hero-tagline">Cuisine authentique & élégance italienne</p>
+    </div>
+</header>
+
+<!-- ================= NAVIGATION ================= -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#section3">3 colonnes</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section2">2 colonnes</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section1">1 colonne</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section4">4 colonnes</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ================= SECTION 3 COLONNES ================= -->
+<section id="section3" class="section">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/300x200" class="img-fluid mb-3" alt="">
+                <h3>Colonne 1</h3>
+                <p>Texte descriptif</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/300x200" class="img-fluid mb-3" alt="">
+                <h3>Colonne 2</h3>
+                <p>Texte descriptif</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/300x200" class="img-fluid mb-3" alt="">
+                <h3>Colonne 3</h3>
+                <p>Texte descriptif</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SECTION 2 COLONNES ================= -->
+<section id="section2" class="section section-alt">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2>Titre section</h2>
+                <p>Texte explicatif plus long, orienté contenu.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="https://via.placeholder.com/600x400" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SECTION 1 COLONNE ================= -->
+<section id="section1" class="section">
+    <div class="container text-center">
+        <h2>Titre central</h2>
+        <p class="mb-4">Contenu sur une seule colonne, idéal storytelling.</p>
+        <img src="https://via.placeholder.com/800x400" class="img-fluid" alt="">
+    </div>
+</section>
+
+<!-- ================= SECTION 4 COLONNES ================= -->
+<section id="section4" class="section section-alt">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3">
+                <h4>Bloc 1</h4>
+                <p>Texte</p>
+            </div>
+            <div class="col-md-3">
+                <h4>Bloc 2</h4>
+                <p>Texte</p>
+            </div>
+            <div class="col-md-3">
+                <h4>Bloc 3</h4>
+                <p>Texte</p>
+            </div>
+            <div class="col-md-3">
+                <h4>Bloc 4</h4>
+                <p>Texte</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Liens</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>À propos</h5>
+                <p>Texte court institutionnel.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Contact</h5>
+                <p>Email / réseaux</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
