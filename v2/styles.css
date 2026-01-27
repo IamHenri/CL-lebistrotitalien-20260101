@@ -1,0 +1,452 @@
+/* ===========================
+   Variables et Reset
+   =========================== */
+:root {
+    --primary-gold: #D4AF37;
+    --dark-gold: #B8941C;
+    --dark-bg: #1a1a1a;
+    --light-bg: #f8f9fa;
+    --text-dark: #2c2c2c;
+    --text-light: #ffffff;
+    --accent-red: #8B0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* ===========================
+   Hero Section (En-tête)
+   =========================== */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&h=1080&fit=crop') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--text-light);
+    padding: 2rem;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+    color: var(--primary-gold);
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--text-light);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================
+   Navigation
+   =========================== */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-gold) !important;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem !important;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-gold);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-gold) !important;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 80%;
+}
+
+/* ===========================
+   Sections Générales
+   =========================== */
+.section-padding {
+    padding: 5rem 0;
+}
+
+.section-header {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    position: relative;
+    display: inline-block;
+}
+
+.title-divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-gold), var(--dark-gold));
+    margin: 1rem auto;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+}
+
+/* ===========================
+   Cards Luxueuses
+   =========================== */
+.luxury-card {
+    border: none;
+    border-radius: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.luxury-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.3);
+}
+
+.luxury-card img {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.luxury-card:hover img {
+    transform: scale(1.1);
+}
+
+.luxury-card .card-body {
+    padding: 2rem;
+    background: #fff;
+}
+
+.luxury-card .card-title {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.luxury-card .card-text {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* ===========================
+   Section Notre Histoire
+   =========================== */
+.lead-text {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+#notre-histoire p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+#notre-histoire img {
+    border: 5px solid var(--primary-gold);
+}
+
+/* ===========================
+   Section Menu (fond sombre)
+   =========================== */
+.gold-text {
+    color: var(--primary-gold);
+    font-family: 'Playfair Display', serif;
+}
+
+.menu-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.menu-content img {
+    border: 3px solid var(--primary-gold);
+}
+
+/* ===========================
+   Section Atouts (4 colonnes)
+   =========================== */
+.feature-box {
+    padding: 2rem;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.feature-box:hover {
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover .feature-icon {
+    transform: rotateY(360deg);
+}
+
+.feature-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    font-family: 'Playfair Display', serif;
+}
+
+.feature-box p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+.footer {
+    padding: 4rem 0 2rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+}
+
+.footer-title {
+    color: var(--primary-gold);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list li {
+    padding: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+}
+
+.footer-list i {
+    color: var(--primary-gold);
+}
+
+.footer-divider {
+    border-color: rgba(212, 175, 55, 0.3);
+    margin: 2rem 0 1rem;
+}
+
+/* ===========================
+   Réseaux Sociaux
+   =========================== */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 2px solid var(--primary-gold);
+    color: var(--primary-gold);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background: var(--primary-gold);
+    color: var(--dark-bg);
+    transform: translateY(-3px);
+}
+
+/* ===========================
+   Boutons
+   =========================== */
+.btn-outline-light {
+    border: 2px solid var(--primary-gold);
+    color: var(--primary-gold);
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background: var(--primary-gold);
+    border-color: var(--primary-gold);
+    color: var(--dark-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 3rem 0;
+    }
+    
+    .hero-section {
+        height: 70vh;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+        padding: 1rem 0;
+    }
+    
+    .navbar-nav .nav-link {
+        margin: 0.5rem 0;
+    }
+    
+    .feature-box {
+        margin-bottom: 2rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* ===========================
+   Animations au scroll
+   =========================== */
+@media (prefers-reduced-motion: no-preference) {
+    .luxury-card,
+    .feature-box {
+        opacity: 0;
+        animation: fadeIn 0.6s ease-out forwards;
+    }
+    
+    .luxury-card:nth-child(1) { animation-delay: 0.1s; }
+    .luxury-card:nth-child(2) { animation-delay: 0.2s; }
+    .luxury-card:nth-child(3) { animation-delay: 0.3s; }
+    
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+}
