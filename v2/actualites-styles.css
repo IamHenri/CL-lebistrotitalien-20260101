@@ -1,0 +1,232 @@
+/* ===========================
+   Section Actualités / Événements
+   =========================== */
+.section-actualites {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    position: relative;
+}
+
+.section-actualites::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, var(--primary-gold), var(--dark-gold));
+}
+
+/* Cards Actualités */
+.actualite-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.actualite-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25);
+}
+
+/* Badge de l'actualité */
+.actualite-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary-gold);
+    color: white;
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    z-index: 3;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.actualite-badge-event {
+    background: linear-gradient(135deg, #8B0000, #dc143c);
+}
+
+.actualite-badge-info {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+}
+
+/* Date de l'événement */
+.actualite-date {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+    z-index: 3;
+    border: 2px solid var(--primary-gold);
+}
+
+.date-day {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1;
+    font-family: 'Playfair Display', serif;
+}
+
+.date-month {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--primary-gold);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Image de l'actualité */
+.actualite-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.actualite-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.actualite-card:hover .actualite-image img {
+    transform: scale(1.1);
+}
+
+.actualite-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+}
+
+/* Contenu de l'actualité */
+.actualite-content {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.actualite-title {
+    font-size: 1.4rem;
+    font-family: 'Playfair Display', serif;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.actualite-text {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+/* Lien "En savoir plus" */
+.actualite-link {
+    color: var(--primary-gold);
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.actualite-link:hover {
+    color: var(--dark-gold);
+    gap: 1rem;
+}
+
+.actualite-link i {
+    transition: transform 0.3s ease;
+}
+
+.actualite-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Animation d'apparition */
+@media (prefers-reduced-motion: no-preference) {
+    .actualite-card {
+        opacity: 0;
+        animation: slideInUp 0.6s ease-out forwards;
+    }
+    
+    .actualite-card:nth-child(1) { animation-delay: 0.1s; }
+    .actualite-card:nth-child(2) { animation-delay: 0.2s; }
+    .actualite-card:nth-child(3) { animation-delay: 0.3s; }
+    
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-actualites {
+        padding: 3rem 0;
+    }
+    
+    .actualite-image {
+        height: 200px;
+    }
+    
+    .actualite-content {
+        padding: 1.5rem;
+    }
+    
+    .actualite-title {
+        font-size: 1.2rem;
+    }
+    
+    .actualite-date {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .date-day {
+        font-size: 1.5rem;
+    }
+}
+
+/* Ajustement pour le menu de navigation */
+.navbar-nav .nav-link[href="#actualites"]::after {
+    content: '';
+}
