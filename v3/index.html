@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Le Bistrot Italien à Auray - Restaurant italien & pizzeria. Pizzas napolitaines, pâtes fraîches et produits italiens authentiques. Sur place et à emporter. Formule midi rapide et fait maison.">
+    <title>Le Bistrot Italien Auray - Restaurant Italien & Pizzeria - Cuisine Authentique</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- HEADER / ZONE HERO -->
+    <header id="accueil" class="hero-section">
+        <div class="hero-overlay"></div>
+        
+        <!-- Mobile Phone Icon (visible only on mobile) -->
+        <a href="tel:+33297567890" class="mobile-phone-icon d-md-none">
+            <i class="fas fa-phone"></i>
+        </a>
+        
+        <div class="container">
+            <div class="hero-content text-center">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h2 class="logo-text">Le Bistrot Italien</h2>
+                    </div>
+                </div>
+                
+                <!-- H1 Principal -->
+                <h1 class="hero-title">Restaurant Italien & Pizzeria<br><span class="location">à Auray</span></h1>
+                
+                <!-- Accroche -->
+                <p class="hero-subtitle">Cuisine authentique italienne, pizzas napolitaines et produits d'exception</p>
+                
+                <!-- CTA principaux -->
+                <div class="hero-cta">
+                    <a href="#menu" class="btn btn-primary btn-lg">Voir la carte</a>
+                    <a href="tel:+33297567890" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-phone me-2"></i>Réserver
+                    </a>
+                </div>
+                
+                <!-- Téléphone visible -->
+                <div class="hero-phone d-none d-md-block">
+                    <a href="tel:+33297567890" class="phone-link">
+                        <i class="fas fa-phone-alt me-2"></i>02 97 56 78 90
+                    </a>
+                </div>
+                
+                <!-- Adresse -->
+                <div class="hero-address">
+                    <i class="fas fa-map-marker-alt me-2"></i>15 Rue du Château, 56400 Auray
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- BLOC 1 - PRÉSENTATION DU RESTAURANT -->
+    <section id="presentation" class="section-presentation">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <h2 class="section-title">Cuisine Italienne Authentique à Auray</h2>
+                    <div class="title-underline"></div>
+                    
+                    <div class="presentation-content">
+                        <p class="lead">Bienvenue au Bistrot Italien, votre restaurant de cuisine authentique italienne au cœur d'Auray.</p>
+                        
+                        <p>Nous sommes spécialisés dans les <strong>pizzas napolitaines</strong> cuites au feu de bois, préparées selon la tradition ancestrale avec une pâte artisanale reposée 48 heures.</p>
+                        
+                        <p>Notre carte met à l'honneur les <strong>produits italiens</strong> d'exception : mozzarella di bufala DOP, tomates San Marzano, huile d'olive extra vierge, charcuteries et fromages affinés directement importés d'Italie.</p>
+                        
+                        <p>Toutes nos préparations sont <strong>100% faites maison</strong> : pâtes fraîches réalisées quotidiennement, sauces mijotées avec amour, desserts confectionnés par notre chef pâtissier.</p>
+                        
+                        <p class="highlight-text"><i class="fas fa-check-circle me-2"></i><strong>Sur place</strong> dans une ambiance chaleureuse et conviviale</p>
+                        <p class="highlight-text"><i class="fas fa-check-circle me-2"></i><strong>À emporter</strong> pour déguster nos spécialités chez vous</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
+                    <div class="presentation-image-container">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&h=600&fit=crop" alt="Pizza napolitaine authentique" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOC 2 - VISUELS CUISINE -->
+    <section class="section-gallery">
+        <div class="container-fluid px-0">
+            <div class="row g-0">
+                <div class="col-md-3 col-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=600&fit=crop" alt="Pizza artisanale" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <span>Pizza Napolitaine</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&h=600&fit=crop" alt="Pâtes fraîches maison" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <span>Pâtes Fraîches</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&h=600&fit=crop" alt="Salade italienne" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <span>Antipasti</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=600&h=600&fit=crop" alt="Tiramisu maison" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <span>Desserts Maison</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOC 3 - FORMULE DU MIDI -->
+    <section id="formule-midi" class="section-formule">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Formule du Midi à Auray - Rapide & Fait Maison</h2>
+                <div class="title-underline mx-auto"></div>
+                <p class="section-subtitle">Du lundi au vendredi, savourez notre formule express préparée avec des produits de saison</p>
+            </div>
+            
+            <div class="row">
+                <!-- Description -->
+                <div class="col-lg-6 mb-4">
+                    <div class="formule-description">
+                        <h3 class="mb-4">Notre Formule Express</h3>
+                        <p class="lead">Chaque jour du lundi au vendredi, profitez d'une formule complète et savoureuse, préparée avec des <strong>produits de saison</strong> soigneusement sélectionnés.</p>
+                        
+                        <p>Notre brigade vous garantit un <strong>service rapide</strong> sans compromis sur la qualité. Tous nos plats sont préparés minute dans nos cuisines.</p>
+                        
+                        <div class="formule-avantages mt-4">
+                            <div class="avantage-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Service express</span>
+                            </div>
+                            <div class="avantage-item">
+                                <i class="fas fa-leaf"></i>
+                                <span>Produits frais</span>
+                            </div>
+                            <div class="avantage-item">
+                                <i class="fas fa-utensils"></i>
+                                <span>100% fait maison</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tarifs -->
+                <div class="col-lg-6 mb-4">
+                    <div class="formule-tarifs">
+                        <div class="tarif-card">
+                            <div class="tarif-header">
+                                <h4>Formule 2 Plats</h4>
+                            </div>
+                            <div class="tarif-options">
+                                <div class="tarif-option">
+                                    <span class="option-label">Entrée + Plat</span>
+                                    <span class="option-price">16,90€</span>
+                                </div>
+                                <div class="tarif-option">
+                                    <span class="option-label">Plat + Dessert</span>
+                                    <span class="option-price">16,90€</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tarif-card tarif-featured">
+                            <div class="tarif-badge">Complet</div>
+                            <div class="tarif-header">
+                                <h4>Formule 3 Plats</h4>
+                            </div>
+                            <div class="tarif-options">
+                                <div class="tarif-option">
+                                    <span class="option-label">Entrée + Plat + Dessert</span>
+                                    <span class="option-price">21,90€</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Exemple de menu -->
+            <div class="menu-exemple mt-5">
+                <div class="text-center mb-4">
+                    <h2 class="section-title">Exemple de Menu</h2>
+                    <p class="menu-disclaimer">Menu non contractuel, susceptible de modifications selon arrivages et saison</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="menu-category">
+                            <h3 class="menu-category-title">
+                                <i class="fas fa-seedling me-2"></i>Entrées
+                            </h3>
+                            <ul class="menu-list">
+                                <li>Bruschetta tomates basilic & mozzarella</li>
+                                <li>Salade Caesar italienne</li>
+                                <li>Carpaccio de bœuf, copeaux de parmesan</li>
+                                <li>Burrata crémeuse & tomates confites</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 mb-4">
+                        <div class="menu-category">
+                            <h3 class="menu-category-title">
+                                <i class="fas fa-pizza-slice me-2"></i>Plats
+                            </h3>
+                            <ul class="menu-list">
+                                <li>Pizza Margherita napolitaine</li>
+                                <li>Pâtes carbonara traditionnelles</li>
+                                <li>Lasagnes bolognaise maison</li>
+                                <li>Risotto aux champignons porcini</li>
+                                <li>Escalope milanaise, spaghetti pomodoro</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 mb-4">
+                        <div class="menu-category">
+                            <h3 class="menu-category-title">
+                                <i class="fas fa-ice-cream me-2"></i>Desserts
+                            </h3>
+                            <ul class="menu-list">
+                                <li>Tiramisu traditionnel</li>
+                                <li>Panna cotta fruits rouges</li>
+                                <li>Cannoli siciliens</li>
+                                <li>Profiteroles chocolat</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOC 4 - VISUELS FORMULE -->
+    <section class="section-formule-gallery">
+        <div class="container-fluid px-0">
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <div class="formule-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1608756687911-aa1599ab3bd9?w=800&h=600&fit=crop" alt="Formule midi - Entrée" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="formule-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1595295333158-4742f28fbd85?w=800&h=600&fit=crop" alt="Formule midi - Plat" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOC 5 - INFORMATIONS PRATIQUES -->
+    <section id="infos-pratiques" class="section-infos">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Informations Pratiques</h2>
+                <div class="title-underline mx-auto"></div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Adresse -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="info-title">Adresse</h3>
+                        <p class="info-text">
+                            <strong>Le Bistrot Italien</strong><br>
+                            15 Rue du Château<br>
+                            56400 Auray<br>
+                            <span class="badge bg-success mt-2">Centre-ville</span>
+                            <span class="badge bg-info mt-2">Facile d'accès</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Horaires -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="info-title">Horaires</h3>
+                        <div class="horaires-list">
+                            <div class="horaire-item">
+                                <span class="jour">Lundi - Vendredi</span>
+                                <span class="heure">12h-14h • 19h-22h</span>
+                            </div>
+                            <div class="horaire-item">
+                                <span class="jour">Samedi</span>
+                                <span class="heure">12h-14h30 • 19h-22h30</span>
+                            </div>
+                            <div class="horaire-item">
+                                <span class="jour">Dimanche</span>
+                                <span class="heure">12h-14h30 • 19h-22h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Réservation -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3 class="info-title">Réservation</h3>
+                        <p class="info-text">
+                            <strong>Par téléphone</strong><br>
+                            <a href="tel:+33297567890" class="phone-number">02 97 56 78 90</a>
+                        </p>
+                        <p class="info-note">Réservation recommandée<br>Du lundi au dimanche<br>9h-12h et 14h-18h</p>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div class="col-12">
+                    <div class="services-grid">
+                        <h3 class="text-center mb-4">Nos Services</h3>
+                        <div class="row g-3">
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <div class="service-badge">
+                                    <i class="fas fa-parking"></i>
+                                    <span>Parking Privé</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <div class="service-badge">
+                                    <i class="fas fa-wheelchair"></i>
+                                    <span>Accès PMR</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <div class="service-badge">
+                                    <i class="fas fa-umbrella-beach"></i>
+                                    <span>Terrasse</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <div class="service-badge">
+                                    <i class="fas fa-child"></i>
+                                    <span>Menu Enfant</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <div class="service-badge">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>Sur Place</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <div class="service-badge">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <span>À Emporter</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOC 6 - ACCÈS & LOCALISATION -->
+    <section id="acces" class="section-acces">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Accès & Localisation</h2>
+                <div class="title-underline mx-auto"></div>
+                <p class="section-subtitle">Nous trouver facilement à Auray</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="map-container">
+                        <!-- Google Maps Embed -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10714.859426534687!2d-2.9854889!3d47.6669896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4810976c5f94e2b5%3A0x9f94e7b1f4b8e7c3!2s56400%20Auray!5e0!3m2!1sfr!2sfr!4v1234567890" 
+                                width="100%" 
+                                height="450" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        
+                        <div class="map-overlay-button">
+                            <a href="https://www.google.com/maps/dir//56400+Auray" target="_blank" class="btn btn-primary btn-lg">
+                                <i class="fas fa-directions me-2"></i>Itinéraire
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Colonne 1 - Logo & Positionnement -->
+                <div class="col-lg-4">
+                    <div class="footer-logo">
+                        <div class="logo-icon-footer">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Le Bistrot Italien</h3>
+                    </div>
+                    <p class="footer-tagline">Restaurant italien authentique à Auray - Pizzas napolitaines, pâtes fraîches et produits d'exception. Sur place et à emporter.</p>
+                    <p class="footer-address">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        15 Rue du Château, 56400 Auray
+                    </p>
+                </div>
+                
+                <!-- Colonne 2 - Liens Rapides -->
+                <div class="col-lg-4">
+                    <h4 class="footer-title">Liens Rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="#presentation">Présentation</a></li>
+                        <li><a href="#formule-midi">Formule du Midi</a></li>
+                        <li><a href="#infos-pratiques">Informations Pratiques</a></li>
+                        <li><a href="#acces">Accès & Localisation</a></li>
+                        <li><a href="#mentions-legales">Mentions Légales</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Colonne 3 - Réseaux Sociaux -->
+                <div class="col-lg-4">
+                    <h4 class="footer-title">Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/lebistrotitalien" target="_blank" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/lebistrotitalien" target="_blank" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="footer-contact mt-4">
+                        <p><strong>Réservation</strong></p>
+                        <a href="tel:+33297567890" class="footer-phone">
+                            <i class="fas fa-phone me-2"></i>02 97 56 78 90
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; 2026 Le Bistrot Italien Auray - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
