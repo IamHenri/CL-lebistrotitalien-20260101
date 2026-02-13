@@ -109,7 +109,7 @@
 }
 
 .carte-content.active {
-    max-height: 4668px;
+    max-height: 4868px;
     margin-top: 2rem;
 }
 
@@ -130,7 +130,7 @@
 }
 
 .carte-image-wrapper:hover .carte-restaurant-img {
-    transform: scale(1.02);
+    transform: scale(1.12);
 }
 
 .carte-close-btn {
@@ -659,6 +659,7 @@ img {
 section {
     padding: var(--spacing-xl) 0;
     position: relative;
+    scroll-margin-top: 90px;
 }
 
 .section-header {
