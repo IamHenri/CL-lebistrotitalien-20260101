@@ -668,7 +668,7 @@ section {
 .section-pretitle {
     display: block;
     font-family: var(--font-elegant);
-    font-size: 1.1rem;
+    font-size: 2rem;
     color: var(--gold-dark);
     text-transform: uppercase;
     letter-spacing: 3px;
