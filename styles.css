@@ -5,7 +5,7 @@
    ========================================== */
 .btn-reserver-fixe {
     position: fixed;
-    top: 120px;
+    top: 100px;
     right: 20px;
     z-index: 10000;
     padding: 1rem 2rem;
@@ -274,7 +274,7 @@ img {
     align-items: center;
     justify-content: center;
     background: linear-gradient(rgba(28, 20, 16, 0.5), rgba(28, 20, 16, 0.6)),
-                url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&h=1080&fit=crop') center/cover no-repeat fixed;
+                url('img/pizza-napolitaine-contemporaine-auray.jpg') center/cover no-repeat fixed;
     color: var(--white);
     overflow: hidden;
 }
