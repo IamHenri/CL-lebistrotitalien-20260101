@@ -17,17 +17,40 @@ AOS.init({
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        
         if (target) {
-            const offsetTop = target.offsetTop - 80;
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
+            // Si le lien pointe vers #carte, ouvrir la carte dépliable
+            if (targetId === '#carte') {
+                // Ouvrir la carte si elle est fermée
+                const carteContent = document.getElementById('carteContent');
+                const carteToggleBtn = document.getElementById('carteToggleBtn');
+                
+                if (!carteContent.classList.contains('active')) {
+                    carteToggleBtn.classList.add('active');
+                    carteContent.classList.add('active');
+                }
+                
+                // Attendre que l'animation d'ouverture soit terminée avant de scroller
+                setTimeout(() => {
+                    const offsetTop = target.offsetTop - 100;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }, 300);
+            } else {
+                // Scroll normal pour les autres ancres
+                const offsetTop = target.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
         }
     });
 });
-
 // ==========================================
 // NAVBAR SCROLL EFFECT
 // ==========================================
@@ -100,59 +123,6 @@ window.addEventListener('load', function() {
 // CARTE DU RESTAURANT - TOGGLE
 // ==========================================
 
-const carteToggleBtn = document.getElementById('carteToggleBtn');
-const carteContent = document.getElementById('carteContent');
-const carteCloseBtn = document.getElementById('carteCloseBtn');
-const carteImage = document.getElementById('carteImage');
-
-// Fonction pour ouvrir la carte
-function openCarte() {
-    carteToggleBtn.classList.add('active');
-    carteContent.classList.add('active');
-}
-
-// Fonction pour fermer la carte
-function closeCarte() {
-    carteToggleBtn.classList.remove('active');
-    carteContent.classList.remove('active');
-}
-
-// Toggle au clic sur le bouton
-carteToggleBtn.addEventListener('click', function() {
-    if (carteContent.classList.contains('active')) {
-        closeCarte();
-    } else {
-        openCarte();
-    }
-});
-
-// Fermer au clic sur le bouton de fermeture
-carteCloseBtn.addEventListener('click', function(e) {
-    e.stopPropagation(); // Empêcher la propagation à l'image
-    closeCarte();
-});
-
-// Fermer au clic sur l'image
-carteImage.addEventListener('click', function() {
-    closeCarte();
-});
-
-// Empêcher la fermeture lors du clic sur le wrapper (seulement sur l'image)
-document.querySelector('.carte-image-wrapper').addEventListener('click', function(e) {
-    if (e.target === carteImage) {
-        closeCarte();
-    }
-});
-
-// ==========================================
-// FERMER LA CARTE AVEC LA TOUCHE ESC
-// ==========================================
-
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && carteContent.classList.contains('active')) {
-        closeCarte();
-    }
-});
 
 // ==========================================
 // ANIMATIONS SUPPLÉMENTAIRES
