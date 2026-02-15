@@ -69,7 +69,8 @@ window.addEventListener('scroll', function() {
 // ACTIVE NAV LINK ON SCROLL
 // ==========================================
 
-const sections = document.querySelectorAll('section');
+// const sections = document.querySelectorAll('section');
+const sections = document.querySelectorAll('section, #cartedurestaurant, footer');
 const navLinks = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
@@ -78,7 +79,7 @@ window.addEventListener('scroll', () => {
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 200) {
+        if (pageYOffset >= sectionTop - 100) {
             current = section.getAttribute('id');
         }
     });
