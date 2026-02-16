@@ -170,3 +170,69 @@ if ('loading' in HTMLImageElement.prototype) {
 
 console.log('%c🍕 Le Bistrot Italien - Site développé avec passion 🍝', 
     'color: #D4AF37; font-size: 16px; font-weight: bold; padding: 10px;');
+
+// ==========================================
+// GESTION DES COOKIES - BANDEAU
+// ==========================================
+
+// Fonction pour définir un cookie
+function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/;SameSite=Strict";
+}
+
+// Fonction pour récupérer un cookie
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i].trim();
+        if (cookie.indexOf(nameEQ) === 0) {
+            return cookie.substring(nameEQ.length, cookie.length);
+        }
+    }
+    return null;
+}
+
+// COOKIES : Vérifier si le consentement existe déjà
+const cookieConsent = getCookie('cookieConsent');
+const cookieBanner = document.getElementById('cookieBanner');
+const acceptBtn = document.getElementById('acceptCookies');
+const declineBtn = document.getElementById('declineCookies');
+
+// Afficher le bandeau si aucun consentement n'est enregistré
+if (!cookieConsent) {
+    setTimeout(() => {
+        cookieBanner.classList.add('show');
+    }, 1000); // Affichage après 1 seconde
+}
+
+// Bouton "J'accepte"
+acceptBtn.addEventListener('click', function() {
+    setCookie('cookieConsent', 'accepted', 365); // Cookie valable 1 an
+    cookieBanner.classList.remove('show');
+    
+    // Ici vous pouvez activer vos scripts d'analytics
+    // Exemple : Google Analytics, Matomo, etc.
+    console.log('✅ Cookies acceptés - Analytics activés');
+    
+    // Si vous utilisez Google Analytics :
+    // window.dataLayer = window.dataLayer || [];
+    // function gtag(){dataLayer.push(arguments);}
+    // gtag('consent', 'update', {'analytics_storage': 'granted'});
+});
+
+// Bouton "Refuser"
+declineBtn.addEventListener('click', function() {
+    setCookie('cookieConsent', 'declined', 365); // Cookie valable 1 an
+    cookieBanner.classList.remove('show');
+    
+    console.log('❌ Cookies refusés - Analytics désactivés');
+    
+    // Si vous utilisez Google Analytics :
+    // window.dataLayer = window.dataLayer || [];
+    // function gtag(){dataLayer.push(arguments);}
+    // gtag('consent', 'update', {'analytics_storage': 'denied'});
+});
