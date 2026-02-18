@@ -70,23 +70,33 @@ window.addEventListener('scroll', function() {
 // ==========================================
 
 // const sections = document.querySelectorAll('section');
+
 const sections = document.querySelectorAll('section, #cartedurestaurant, footer');
 const navLinks = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
     let current = '';
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
     
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 100) {
-            current = section.getAttribute('id');
-        }
-    });
+    // Si on est tout en bas de la page, forcer "contact"
+    if (scrollPosition + windowHeight >= documentHeight - 50) {
+        current = 'contact';
+    } else {
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollPosition >= sectionTop - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+    }
     
     navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
+        const href = link.getAttribute('href');
+        if (href === `#${current}`) {
             link.classList.add('active');
         }
     });
