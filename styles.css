@@ -279,9 +279,19 @@ img {
     align-items: center;
     justify-content: center;
     background: linear-gradient(rgba(28, 20, 16, 0.5), rgba(28, 20, 16, 0.6)),
-                url('img/pizza-napolitaine-contemporaine-auray.jpg') center/cover no-repeat fixed;
+                url('img/pizza-napolitaine-contemporaine-auray.jpg') center/cover no-repeat ;
     color: var(--white);
     overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Fix flou Safari iOS */
+.hero-section {
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
 }
 
 .hero-section::before {
